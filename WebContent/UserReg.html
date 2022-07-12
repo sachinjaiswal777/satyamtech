@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="./js/userReg.js"></script>
+<!-- <link rel="stylesheet" href="C:\Users\user\Desktop\userRegCss.css"> -->
+
+</head>
+<body onload="onloadValues();">
+<h1 style="background-color:DodgerBlue;">User Registration</h1>
+
+	<table>
+		<form action="employee" method="POST">
+			<tr><td>First Name*</td><td></td><td><input type="text" name="fname" id="fname" value="Sachin" onmouseover="changeName(this);" required></td><td><div id="fnameDiv"></div></td/></tr>
+			<tr id="lastNameRow"><td>Last Name</td><td></td><td><input type="text" name="lname" id="lname" onkeyup="changeLName(this);"></td><td><div id="lnameDiv"></div></td/></tr>
+			<tr class="myCssClass myCssClass2"><td>Gender</td><td></td><td>
+				<select name="gender" id="gender" onchange="genderChange();">
+				<option value="M">MALE</option>
+				<option value="F">FEMALE</option>
+				</select>
+			</td></tr>
+			<tr><td>Salary</td><td></td><td><input type="number" name="salary" id="salary"></td></tr>
+			<tr><td>Date Of Birth</td><td></td><td><input type="datetime-local" name="dob" id="dob"></td></tr>
+			<tr><td>Email</td><td></td><td><input type="email" name="email" id="email"></td></tr>
+			<tr><td>Passport Photo</td><td></td><td><input type="file" name="photo" id="photo"></td></tr>
+			<tr><td>Address</td><td></td><td><textarea id="address" name="address" rows="4" cols="30"></textarea></td></tr>
+			<tr><td>State</td><td></td><td>
+				<select name="state" id="state" onchange="stateChange(this);">
+				<option value="MP">Madhya Pradesh</option>
+				<option value="MH">Maharshtra</option>				
+				<option value="AP">Andhra Pradesh</option>
+				<option value="UP">Uttar Pradesh</option>
+				</select>
+			</td></tr>
+			<tr><td>District</td><td></td><td>
+				<select name="district" id="district">
+				<option value="">-- Select District --</option>
+				</select>
+			</td></tr>
+			
+			<tr><td>Do you have Driving Licence?</td><td></td><td><input type="checkbox" name="dl" id="dl" value="YES"></td></tr>
+			<tr><td>Do you have Visa Passport?</td><td></td><td><input type="radio" value="Yes" name="passport"> Yes <input type="radio" value="No" name="passport" checked> No</td></tr>
+			<tr><td></td><td></td><td><input type="submit" value="Register" onclick="return onSubmitCheck();"></td></tr>
+		</form>
+	</table>
+	<b><div id="genderDiv">MALE</div></b>
+</body>
+</html>
